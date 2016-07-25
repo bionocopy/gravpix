@@ -8,13 +8,22 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Middleman" %></title>
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-
     <%= stylesheet_link_tag :site %>
     <%= javascript_include_tag :all %>
   </head>
 
   <body class="<%= page_classes %>">
-    <%= yield %>
+    
+    <header>
+      <div class="logo">
+        <a href="../index.html">
+          <%= image_tag "logo-tiny.png" %><h2>gravpix design studio</h2>
+        </a>
+        <p>в пикселях надежней</p>
+      </div>
+    </header>
+    
+     <%= yield %>
+     
   </body>
 </html>
